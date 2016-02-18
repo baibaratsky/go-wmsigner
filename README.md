@@ -1,6 +1,7 @@
 WebMoney Signer
 ===============
 [![Build Status](https://travis-ci.org/baibaratsky/go-wmsigner.svg)](https://travis-ci.org/baibaratsky/go-wmsigner)
+[![Coverage Status](https://coveralls.io/repos/github/baibaratsky/go-wmsigner/badge.svg?branch=master)](https://coveralls.io/github/baibaratsky/go-wmsigner?branch=master)
 [![GitHub license](https://img.shields.io/github/license/baibaratsky/go-wmsigner.svg)](https://github.com/baibaratsky/go-wmsigner)
 
 Provides a convenient way to sign your requests to WebMoney API in Go with no need to run executables.
