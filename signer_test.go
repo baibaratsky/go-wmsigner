@@ -50,7 +50,10 @@ func TestSign(t *testing.T) {
 
 func TestSignHalfPasswordCase(t *testing.T) {
 	// Double password to make its half to be the right password
-	signer, err := New(wmid, keyFileName, keyPassword + keyPassword)
+	// A char added to check if the length of a password is odd
+	doubleLengthPassword := keyPassword + keyPassword + "!"
+
+	signer, err := New(wmid, keyFileName, doubleLengthPassword)
 	if err != nil {
 		t.Fatal(err.Error())
 	}

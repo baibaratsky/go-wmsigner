@@ -70,7 +70,7 @@ func New(wmid, keyFileName, keyPassword string) (signer, error) {
 	if (!verified) {
 		// Try one more time using only the first half of the password
 		keyFile.Seek(0, 0)
-		halfPassword := keyPassword[:int(math.Ceil(float64(len(keyPassword)) / 2))]
+		halfPassword := keyPassword[:int(math.Floor(float64(len(keyPassword)) / 2))]
 		key, verified = initKey(keyFile, wmid, halfPassword)
 		if (!verified) {
 			return signer{}, errors.New("Hash check failed. Key file seems to be corrupted.")
